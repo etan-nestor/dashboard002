@@ -22,7 +22,7 @@ const sales = [
     id: '1',
     invoice: 'INV-2023-001',
     date: '2023-10-15',
-    customer: 'Jean Dupont',
+    customer: 'Nestor C.',
     amount: 142.50,
     status: 'payé',
     items: [
@@ -34,7 +34,7 @@ const sales = [
     id: '2',
     invoice: 'INV-2023-002',
     date: '2023-10-14',
-    customer: 'Marie Lambert',
+    customer: 'P. Leandre',
     amount: 87.30,
     status: 'payé',
     items: [
@@ -46,7 +46,7 @@ const sales = [
     id: '3',
     invoice: 'INV-2023-003',
     date: '2023-10-13',
-    customer: 'Lucie Martin',
+    customer: 'Y. Martin',
     amount: 23.75,
     status: 'en attente',
     items: [
@@ -57,7 +57,7 @@ const sales = [
     id: '4',
     invoice: 'INV-2023-004',
     date: '2023-10-12',
-    customer: 'Pierre Bernard',
+    customer: 'T. Bernard',
     amount: 56.90,
     status: 'annulé',
     items: [

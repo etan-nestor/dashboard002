@@ -20,8 +20,8 @@ import React from 'react'
 const clients = [
   {
     id: '1',
-    name: 'Jean Dupont',
-    email: 'jean.dupont@example.com',
+    name: 'Nestor COMPAORE',
+    email: 'nestor@example.com',
     phone: '+226 65 03 37 42',
     totalPurchases: 1425.50,
     lastPurchase: '2023-10-15',
@@ -29,8 +29,8 @@ const clients = [
   },
   {
     id: '2',
-    name: 'Marie Lambert',
-    email: 'marie.lambert@example.com',
+    name: 'Abdoul Rachid',
+    email: 'rachid@example.com',
     phone: '+226 70 12 34 56',
     totalPurchases: 873.30,
     lastPurchase: '2023-10-14',
@@ -38,8 +38,8 @@ const clients = [
   },
   {
     id: '3',
-    name: 'Lucie Martin',
-    email: 'lucie.martin@example.com',
+    name: 'Jr Martin',
+    email: 'martin@example.com',
     phone: '+226 65 55 66 77',
     totalPurchases: 237.75,
     lastPurchase: '2023-09-28',
@@ -47,8 +47,8 @@ const clients = [
   },
   {
     id: '4',
-    name: 'Pierre Bernard',
-    email: 'pierre.bernard@example.com',
+    name: 'TIAMA Bernard',
+    email: 'bernard@example.com',
     phone: '+226 70 88 99 00',
     totalPurchases: 569.90,
     lastPurchase: '2023-08-12',

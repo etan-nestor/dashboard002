@@ -35,7 +35,7 @@ export default function DashboardPage() {
   const stats: StatItem[] = [
     {
       title: "Revenu Total",
-      value: "33,231 FCFA",
+      value: "33,231 $",
       change: "+20.1%",
       icon: DollarSign,
       trend: "up",

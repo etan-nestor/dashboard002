@@ -15,7 +15,17 @@ import {
 import { Badge } from '@/components/ui/badge'
 import { useState } from 'react'
 
-const medications = [
+interface Medication {
+  id: string;
+  name: string;
+  category: string;
+  stock: number;
+  price: number;
+  status: string;
+  lastUpdate: string;
+}
+
+const medications: Medication[] = [
   {
     id: '1',
     name: 'Paracétamol 500mg',
@@ -65,7 +75,10 @@ const medications = [
 
 export default function MedicamentsPage() {
   const [searchTerm, setSearchTerm] = useState('')
-  const [sortConfig, setSortConfig] = useState({ key: 'name', direction: 'ascending' })
+  const [sortConfig, setSortConfig] = useState<{ key: keyof Medication; direction: 'ascending' | 'descending' }>({ 
+    key: 'name', 
+    direction: 'ascending' 
+  })
   const [expandedRow, setExpandedRow] = useState<string | null>(null)
 
   const filteredMedications = medications.filter(med =>
@@ -73,8 +86,8 @@ export default function MedicamentsPage() {
     med.category.toLowerCase().includes(searchTerm.toLowerCase())
   )
 
-  const requestSort = (key: string) => {
-    let direction = 'ascending'
+  const requestSort = (key: keyof Medication) => {
+    let direction: 'ascending' | 'descending' = 'ascending'
     if (sortConfig.key === key && sortConfig.direction === 'ascending') {
       direction = 'descending'
     }
@@ -82,10 +95,13 @@ export default function MedicamentsPage() {
   }
 
   const sortedMedications = [...filteredMedications].sort((a, b) => {
-    if (a[sortConfig.key] < b[sortConfig.key]) {
+    const aValue = a[sortConfig.key]
+    const bValue = b[sortConfig.key]
+
+    if (aValue < bValue) {
       return sortConfig.direction === 'ascending' ? -1 : 1
     }
-    if (a[sortConfig.key] > b[sortConfig.key]) {
+    if (aValue > bValue) {
       return sortConfig.direction === 'ascending' ? 1 : -1
     }
     return 0
